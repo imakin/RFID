@@ -552,7 +552,7 @@ byte MFRC522::PICC_Select(	Uid *uid,			///< Pointer to Uid struct. Normally outp
 		byte bytesToCopy = currentLevelKnownBits / 8 + (currentLevelKnownBits % 8 ? 1 : 0); // The number of bytes needed to represent the known bits for this level.
 		if (bytesToCopy) {
 			byte maxBytes = useCascadeTag ? 3 : 4; // Max 4 bytes in each Cascade Level. Only 3 left if we use the Cascade Tag
-			if (bytesToCopy > maxBytes) { 
+			if (bytesToCopy > maxBytes) {
 				bytesToCopy = maxBytes;
 			}
 			for (count = 0; count < bytesToCopy; count++) {
